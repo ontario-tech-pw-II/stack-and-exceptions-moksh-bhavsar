@@ -20,10 +20,16 @@ int main()
     {
         if(is_str_digit(in)){
             // add your code here
+			st.push(in);
         }
         else if(is_str_operator(in))
         {
             // add your code here 
+			int value3;
+			int value1 = stoi(st.top());
+			st.pop();
+			int value2 = stoi(st.top());
+			st.pop();
 
             switch(in[0])
             {
@@ -46,7 +52,7 @@ int main()
             }
 
             // add your code here
-
+			st.push(to_string(value3));
         }
         cin >> in;
     }
